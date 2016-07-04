@@ -1,0 +1,47 @@
+git命令
+1.git init 初始化本地仓库
+
+2.git add <file> 将工作区的文件加入到暂存区
+
+3.git commit 将暂存区文件提交到分支
+
+4.git status
+
+5.git diff
+
+6.git log，git reflog, ``--pretty=oneline
+
+7.git reaet
+--mixed
+--hard
+--soft
+HEAD	HEAD^	HEAD^^	HEAD~100
+当前版本	上一个版本	上上个版本	上100个版本
+
+git reset --hard commit_id
+8.git checkout -- <file> 将file文件在工作区的修改全部撤销，其中--参数必带，否则为切换分支
+git reset HEAD file 将提交到暂存区的文件还原
+
+9.git rm <file>将文件从版本库删除
+
+10.git remote add origin <git@server-name:path/repo-name.git> 关联一个远程仓库
+
+11.git push -u origin master 关联后第一次push到master，-u在之后的提交省略
+
+12.git clone
+
+13.git checkout -b dev,-b表示创建并切换分支
+
+14.git branch 查看当前分支
+
+15.分支合并流程
+
+git checkout master 切回主干
+git merge dev 将dev分支合并到主干
+修改冲突文件,git add <file>, git commit
+git branch -d dev 删除dev分支
+16.git log --graph查看分支合并图
+
+17.git remote -v查看远程库的详细信息
+
+18.git push origin <branch-name>推送分支
